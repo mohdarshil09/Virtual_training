@@ -1,0 +1,29 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\refint\BankingAndFinancialServices.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Web_API Practice\VirtualTraining\BankingAndFinancialServices\obj\Debug\net10.0\ref\BankingAndFinancialServices.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\bin\Debug\net10.0\BankingAndFinancialServices.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\refint\BankingAndFinancialServices.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\BankingAndFinancialServices.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week1\Day1\BankingAndFinancialServices\obj\Debug\net10.0\ref\BankingAndFinancialServices.dll
