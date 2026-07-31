@@ -5,15 +5,18 @@ namespace CoursePrerequisiteSystem
 {
     internal class Program
     {
+        // Graph using adjacency list
         static List<int>[] courses = new List<int>[6];
 
         static void Main(string[] args)
         {
+            // Initialize graph
             for (int i = 0; i < courses.Length; i++)
             {
                 courses[i] = new List<int>();
             }
 
+            // Add course prerequisites
             Connect(0, 1);
             Connect(0, 2);
             Connect(1, 3);
@@ -50,11 +53,13 @@ namespace CoursePrerequisiteSystem
             DependentCourses(2);
         }
 
+        // Add an edge to the graph
         static void Connect(int from, int to)
         {
             courses[from].Add(to);
         }
 
+        // Display all direct and indirect prerequisites
         static void ShowAllPrerequisites(int target)
         {
             bool[] found = new bool[6];
@@ -69,6 +74,7 @@ namespace CoursePrerequisiteSystem
             Console.WriteLine();
         }
 
+        // Recursive DFS search
         static void Search(int target, bool[] found)
         {
             for (int i = 0; i < courses.Length; i++)
@@ -84,6 +90,7 @@ namespace CoursePrerequisiteSystem
             }
         }
 
+        // Display only direct prerequisites
         static void ShowDirectPrerequisites(int target)
         {
             for (int i = 0; i < courses.Length; i++)
@@ -97,6 +104,7 @@ namespace CoursePrerequisiteSystem
             Console.WriteLine();
         }
 
+        // Check whether the graph contains a cycle
         static bool CycleExists()
         {
             bool[] visited = new bool[6];
@@ -111,6 +119,7 @@ namespace CoursePrerequisiteSystem
             return false;
         }
 
+        // DFS for cycle detection
         static bool Check(int node, bool[] visited, bool[] stack)
         {
             if (stack[node])
@@ -132,6 +141,7 @@ namespace CoursePrerequisiteSystem
             return false;
         }
 
+        // Display topological order
         static void DisplayTopologicalOrder()
         {
             int[] degree = new int[6];
@@ -169,6 +179,7 @@ namespace CoursePrerequisiteSystem
             Console.WriteLine();
         }
 
+        // Display courses with no prerequisites
         static void FirstCourses()
         {
             int[] degree = new int[6];
@@ -190,6 +201,7 @@ namespace CoursePrerequisiteSystem
             Console.WriteLine();
         }
 
+        // Count courses that depend on a given course
         static void DependentCourses(int course)
         {
             Console.Write("Courses: ");
