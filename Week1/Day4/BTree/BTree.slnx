@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="BTree/BTree.csproj" />
+  <Project Path="CoursePrerequisiteSystem/CoursePrerequisiteSystem.csproj" />
   <Project Path="Graph/Graph.csproj" />
 </Solution>
