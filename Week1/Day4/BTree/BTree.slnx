@@ -2,4 +2,5 @@
   <Project Path="BTree/BTree.csproj" />
   <Project Path="CoursePrerequisiteSystem/CoursePrerequisiteSystem.csproj" />
   <Project Path="Graph/Graph.csproj" />
+  <Project Path="SocialNetworkFriendRecommendations/SocialNetworkFriendRecommendations.csproj" Id="32c4441b-0ba8-4d96-af9c-c31f4e20605d" />
 </Solution>
