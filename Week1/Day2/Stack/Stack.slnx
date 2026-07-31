@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BrowserHistoryManagement/BrowserHistoryManagement.csproj" />
+  <Project Path="CustomerSupportTicketManagement/CustomerSupportTicketManagement.csproj" />
+  <Project Path="HospitalQueueManagement/HospitalQueueManagement.csproj" />
+  <Project Path="QueueImplementation/QueueImplementation.csproj" />
+  <Project Path="Stack/StackImplementation.csproj" />
+</Solution>

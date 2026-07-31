@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BinarysearchTree/BinarysearchTree.csproj" />
+  <Project Path="BinaryTree/BinaryTree.csproj" />
+  <Project Path="CircularLinkedList/CircularLinkedList.csproj" />
+  <Project Path="DoubleLinkedList/DoublyLinkedList.csproj" />
+  <Project Path="LinkedList/LinkedList.csproj" />
+</Solution>

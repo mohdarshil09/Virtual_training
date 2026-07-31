@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BTree/BTree.csproj" />
+  <Project Path="Graph/Graph.csproj" />
+</Solution>
