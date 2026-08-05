@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\bin\Debug\net10.0\ParallelQuickSort.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\bin\Debug\net10.0\ParallelQuickSort.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\bin\Debug\net10.0\ParallelQuickSort.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\bin\Debug\net10.0\ParallelQuickSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\bin\Debug\net10.0\ParallelQuickSort.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\refint\ParallelQuickSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ParallelQuickSort.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day7\HeapSort\ParallelQuickSort\obj\Debug\net10.0\ref\ParallelQuickSort.dll
