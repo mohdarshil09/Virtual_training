@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\bin\Debug\net10.0\BubbleSort.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\bin\Debug\net10.0\BubbleSort.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\bin\Debug\net10.0\BubbleSort.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\bin\Debug\net10.0\BubbleSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\bin\Debug\net10.0\BubbleSort.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\refint\BubbleSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\BubbleSort.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\BubbleSort\obj\Debug\net10.0\ref\BubbleSort.dll
