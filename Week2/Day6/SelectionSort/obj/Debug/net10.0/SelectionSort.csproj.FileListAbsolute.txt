@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\bin\Debug\net10.0\SelectionSort.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\bin\Debug\net10.0\SelectionSort.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\bin\Debug\net10.0\SelectionSort.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\bin\Debug\net10.0\SelectionSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\bin\Debug\net10.0\SelectionSort.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\refint\SelectionSort.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\SelectionSort.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day6\SelectionSort\obj\Debug\net10.0\ref\SelectionSort.dll
