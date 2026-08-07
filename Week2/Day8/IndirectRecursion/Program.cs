@@ -1,6 +1,6 @@
 using System;
 
-namespace MutualRecursion
+namespace IndirectRecursion
 {
     internal class Program
     {
