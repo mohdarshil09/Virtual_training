@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\bin\Debug\net10.0\DirectRecursion.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\bin\Debug\net10.0\DirectRecursion.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\bin\Debug\net10.0\DirectRecursion.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\bin\Debug\net10.0\DirectRecursion.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\bin\Debug\net10.0\DirectRecursion.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\refint\DirectRecursion.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\DirectRecursion.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day8\EmployeeSearchSystem\DirectRecursion\obj\Debug\net10.0\ref\DirectRecursion.dll
