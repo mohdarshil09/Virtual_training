@@ -1,20 +1,20 @@
 ﻿using System;
 
-namespace HeadRecursion
+namespace HeadRecursionExample
 {
     internal class Program
     {
-        static void Head(int n)
+        static void SumDigitsReversed(int n)
         {
             // Base Case
             if (n == 0)
                 return;
 
             // Recursive Call
-            Head(n - 1);
+            SumDigitsReversed(n / 10);
 
-            // Work after recursion
-            Console.Write(n + " ");
+            // Print digit while returning
+            Console.Write(n % 10 + " ");
         }
 
         static void Main(string[] args)
@@ -22,9 +22,9 @@ namespace HeadRecursion
             Console.Write("Enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("\nHead Recursion Output:");
+            Console.WriteLine("\nDigits in Reverse Order:");
 
-            Head(number);
+            SumDigitsReversed(number);
 
             Console.ReadKey();
         }
