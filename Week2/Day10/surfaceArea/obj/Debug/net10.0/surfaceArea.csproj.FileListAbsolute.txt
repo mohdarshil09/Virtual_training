@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\bin\Debug\net10.0\surfaceArea.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\bin\Debug\net10.0\surfaceArea.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\bin\Debug\net10.0\surfaceArea.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\bin\Debug\net10.0\surfaceArea.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\bin\Debug\net10.0\surfaceArea.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\refint\surfaceArea.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\surfaceArea.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week2\Day10\aVeryBigSum\surfaceArea\obj\Debug\net10.0\ref\surfaceArea.dll
