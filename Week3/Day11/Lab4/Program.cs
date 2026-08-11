@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 class Employee
@@ -7,6 +8,17 @@ class Employee
     public string Name { get; set; }
     public string Department { get; set; }
     public decimal Salary { get; set; }
+}
+
+// StringToolkit class
+static class StringToolkit
+{
+    public static string ToTitleCase(string input)
+    {
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+
+        return textInfo.ToTitleCase(input.ToLower());
+    }
 }
 
 class Program
@@ -58,7 +70,7 @@ ravi KUMAR|engineering|81000
             });
         }
 
-        // Calculate totals
+        // Calculate total salary
         decimal totalSalary = 0;
 
         foreach (Employee employee in employees)
@@ -66,7 +78,7 @@ ravi KUMAR|engineering|81000
             totalSalary += employee.Salary;
         }
 
-        // StringBuilder
+        // Create StringBuilder
         StringBuilder sb = new StringBuilder();
 
         int appendCalls = 0;
@@ -95,7 +107,7 @@ ravi KUMAR|engineering|81000
             string line =
                 employee.Name.PadRight(20) +
                 employee.Department.PadRight(18) +
-                employee.Salary.ToString("C").PadLeft(12);
+                employee.Salary.ToString("N0").PadLeft(12);
 
             sb.AppendLine(line);
             appendCalls++;
@@ -117,9 +129,11 @@ ravi KUMAR|engineering|81000
         // Statistics
         Console.WriteLine();
         Console.WriteLine("===== BUILD STATISTICS =====");
+
         Console.WriteLine(
             $"StringBuilder Append calls: {appendCalls}"
         );
+
         Console.WriteLine(
             "String concatenations in loop: 0"
         );
