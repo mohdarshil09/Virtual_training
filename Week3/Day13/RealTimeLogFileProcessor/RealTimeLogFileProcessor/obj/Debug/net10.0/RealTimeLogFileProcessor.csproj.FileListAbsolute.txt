@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\bin\Debug\net10.0\RealTimeLogFileProcessor.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\bin\Debug\net10.0\RealTimeLogFileProcessor.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\bin\Debug\net10.0\RealTimeLogFileProcessor.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\bin\Debug\net10.0\RealTimeLogFileProcessor.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\bin\Debug\net10.0\RealTimeLogFileProcessor.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\refint\RealTimeLogFileProcessor.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\RealTimeLogFileProcessor.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\RealTimeLogFileProcessor\RealTimeLogFileProcessor\obj\Debug\net10.0\ref\RealTimeLogFileProcessor.dll

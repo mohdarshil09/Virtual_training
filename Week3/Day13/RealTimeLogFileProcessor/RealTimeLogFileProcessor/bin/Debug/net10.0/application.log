@@ -1,0 +1,7 @@
+[2026-08-12 10:07:59] INFO: Application started.
+[2026-08-12 10:07:59] INFO: User logged in successfully.
+[2026-08-12 10:07:59] WARNING: Memory usage is getting high.
+[2026-08-12 10:07:59] ERROR: Database connection failed. | Exception: Unable to connect to SQL Server.
+[2026-08-12 10:07:59] INFO: Retrying database connection.
+[2026-08-12 10:07:59] ERROR: File could not be processed. | Exception: File not found.
+[2026-08-12 10:07:59] INFO: Application continues running.
