@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\bin\Debug\net10.0\Lab5.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\bin\Debug\net10.0\Lab5.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\bin\Debug\net10.0\Lab5.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\bin\Debug\net10.0\Lab5.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\bin\Debug\net10.0\Lab5.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\refint\Lab5.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\Lab5.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week3\Day13\Lab\Lab5\obj\Debug\net10.0\ref\Lab5.dll
