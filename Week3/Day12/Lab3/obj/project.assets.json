@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day12\\Class\\Lab3\\Lab3.csproj",
+      "projectUniqueName": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\CSharp\\Lab3\\Lab3.csproj",
       "projectName": "Lab3",
-      "projectPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day12\\Class\\Lab3\\Lab3.csproj",
+      "projectPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\CSharp\\Lab3\\Lab3.csproj",
       "packagesPath": "C:\\Users\\MOHD ARSHIL AZIM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day12\\Class\\Lab3\\obj\\",
+      "outputPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\CSharp\\Lab3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

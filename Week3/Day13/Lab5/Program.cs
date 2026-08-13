@@ -1,144 +1,168 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lab5
 {
-    // Base identification contract
-    public interface IIdentifiable
+    // 1. Method Overloading
+    public class Formatter
     {
-        string Id { get; }
-    }
-
-    // Payment contract inherits IIdentifiable
-    public interface IPaymentMethod : IIdentifiable
-    {
-        string DisplayName { get; }
-
-        PaymentResult Charge(decimal amount);
-    }
-
-    // Encapsulated payment result
-    public class PaymentResult
-    {
-        public bool Success { get; }
-        public string Message { get; }
-
-        public PaymentResult(bool success, string message)
+        // Format(int)
+        public string Format(int value)
         {
-            if (message == null)
-                throw new ArgumentNullException(nameof(message));
+            return value.ToString();
+        }
 
-            Success = success;
-            Message = message;
+        // Format(double)
+        public string Format(double value)
+        {
+            return value.ToString("F2");
+        }
+
+        // Format(int, int)
+        public string Format(int numerator, int denominator)
+        {
+            return $"{numerator}/{denominator}";
         }
     }
 
-    // Abstract base payment class
-    public abstract class PaymentMethodBase : IPaymentMethod
-    {
-        public string Id { get; }
-        public string DisplayName { get; }
 
-        protected PaymentMethodBase(string id, string displayName)
+    // 2. Base class
+    public class Notifier
+    {
+        // Virtual method
+        public virtual void Send()
         {
-            Id = id;
-            DisplayName = displayName;
+            Console.WriteLine("Notifier: generic send");
         }
 
-        public abstract PaymentResult Charge(decimal amount);
+        // Non-virtual method
+        public void Log()
+        {
+            Console.WriteLine("Notifier: generic log");
+        }
     }
 
-    // Credit card implementation
-    public class CreditCardPayment : PaymentMethodBase
+
+    // 3. Derived class
+    public class EmailNotifier : Notifier
     {
-        public CreditCardPayment(string id, string displayName)
-            : base(id, displayName)
+        // Method overriding
+        public override void Send()
         {
+            Console.WriteLine("EmailNotifier: sending email");
         }
 
-        public override PaymentResult Charge(decimal amount)
+        // Method hiding
+        public new void Log()
         {
-            if (amount > 5000)
-            {
-                return new PaymentResult(
-                    false,
-                    "Credit card limit exceeded."
-                );
-            }
+            Console.WriteLine("EmailNotifier: logging to email log");
+        }
+    }
 
-            return new PaymentResult(
-                true,
-                "Credit card payment successful."
+
+    // 4. Operator Overloading
+    public struct Vector2
+    {
+        public double X, Y;
+
+        public Vector2(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        // Operator +
+        public static Vector2 operator +(Vector2 a, Vector2 b)
+        {
+            return new Vector2(
+                a.X + b.X,
+                a.Y + b.Y
             );
         }
-    }
 
-    // Sealed cash payment implementation
-    public sealed class CashPayment : PaymentMethodBase
-    {
-        public CashPayment(string id, string displayName)
-            : base(id, displayName)
+        // Operator * for scalar multiplication
+        public static Vector2 operator *(Vector2 vector, double scalar)
         {
-        }
-
-        public override PaymentResult Charge(decimal amount)
-        {
-            return new PaymentResult(
-                true,
-                "Cash payment successful."
+            return new Vector2(
+                vector.X * scalar,
+                vector.Y * scalar
             );
         }
+
+        public override string ToString()
+        {
+            return $"({X}, {Y})";
+        }
     }
+
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            // List uses the interface type
-            List<IPaymentMethod> paymentMethods = new List<IPaymentMethod>
-            {
-                new CreditCardPayment("CC-1", "Visa ...1234"),
-                new CashPayment("CASH-1", "Cash Drawer")
-            };
+            // ---------------------------------------
+            // 1. METHOD OVERLOADING
+            // ---------------------------------------
 
-            // Amounts to process
-            decimal[] amounts = { 1500m, 6000m };
+            Formatter formatter = new Formatter();
 
-            // Anonymous-type settlement report
-            var settlementReport = paymentMethods
-                .SelectMany(payment => amounts.Select(amount =>
-                {
-                    PaymentResult result = payment.Charge(amount);
+            Console.WriteLine(
+                $"Format(7) -> \"{formatter.Format(7)}\""
+            );
 
-                    return new
-                    {
-                        Id = payment.Id,
-                        DisplayName = payment.DisplayName,
-                        AmountAttempted = amount,
-                        Success = result.Success
-                    };
-                }))
-                .ToList();
+            Console.WriteLine(
+                $"Format(3.5) -> \"{formatter.Format(3.5)}\""
+            );
 
-            // Print report
-            foreach (var entry in settlementReport)
-            {
-                Console.WriteLine(
-                    $"{entry.Id}  {entry.DisplayName,-15} " +
-                    $"Attempted={entry.AmountAttempted:F2}  " +
-                    $"Success={entry.Success}"
-                );
-            }
+            Console.WriteLine(
+                $"Format(3, 4) -> \"{formatter.Format(3, 4)}\""
+            );
 
-            // Calculate total successfully settled amount
-            decimal totalSettled = settlementReport
-                .Where(x => x.Success)
-                .Sum(x => x.AmountAttempted);
+
+           
+            // 2. OVERRIDE VS HIDE
+
+            EmailNotifier email = new EmailNotifier();
+
+            Console.WriteLine();
+            Console.WriteLine("-- through EmailNotifier variable --");
+
+            email.Send();
+            email.Log();
+
+
+            // Base-class reference pointing to same object
+            Notifier notifier = email;
 
             Console.WriteLine();
             Console.WriteLine(
-                $"Total successfully settled: {totalSettled:F2}"
+                "-- through Notifier variable, same object --"
+            );
+
+            notifier.Send();
+            notifier.Log();
+
+
+            
+            // 3. OPERATOR OVERLOADING
+
+            Console.WriteLine();
+
+            Vector2 v1 = new Vector2(1, 2);
+            Vector2 v2 = new Vector2(3, 4);
+
+            Vector2 sum = v1 + v2;
+
+            Console.WriteLine(
+                $"{v1} + {v2} = {sum}"
+            );
+
+
+            Vector2 v3 = new Vector2(2, 2);
+
+            Vector2 scaled = v3 * 3;
+
+            Console.WriteLine(
+                $"{v3} * 3 = {scaled}"
             );
         }
     }

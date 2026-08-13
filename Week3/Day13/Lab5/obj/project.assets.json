@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day13\\RealTimeLogFileProcessor\\Lab5\\Lab5.csproj",
+      "projectUniqueName": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day12\\Class\\Lab5\\Lab5.csproj",
       "projectName": "Lab5",
-      "projectPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day13\\RealTimeLogFileProcessor\\Lab5\\Lab5.csproj",
+      "projectPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day12\\Class\\Lab5\\Lab5.csproj",
       "packagesPath": "C:\\Users\\MOHD ARSHIL AZIM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day13\\RealTimeLogFileProcessor\\Lab5\\obj\\",
+      "outputPath": "C:\\Users\\MOHD ARSHIL AZIM\\Desktop\\Virtual_training\\Week3\\Day12\\Class\\Lab5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -2,61 +2,109 @@
 
 namespace Lab3
 {
-    // Base class - can still be inherited
-    public class TaxCalculator
+    public class Appointment
     {
-        public virtual decimal CalculateTax(decimal amount)
+        // Properties
+        public string Title { get; }
+        public DateTime Start { get; }
+        public TimeSpan Duration { get; }
+        public string Location { get; }
+
+        // Static field
+        public static int DefaultDurationMinutes;
+
+
+        // Static constructor
+        static Appointment()
         {
-            return amount * 0.1m;
+            Console.WriteLine(
+                "Appointment type initialized. Default duration set to 30 minutes."
+            );
+
+            DefaultDurationMinutes = 30;
+        }
+
+
+        // Full constructor
+        public Appointment(
+            string title,
+            DateTime start,
+            TimeSpan duration,
+            string location)
+        {
+            Title = title;
+            Start = start;
+            Duration = duration;
+            Location = location;
+        }
+
+
+        // Two-argument constructor
+        // Chains to the full constructor
+        public Appointment(string title, DateTime start)
+            : this(
+                title,
+                start,
+                TimeSpan.FromMinutes(DefaultDurationMinutes),
+                "TBD")
+        {
+        }
+
+
+        // One-argument constructor
+        // Chains to the two-argument constructor
+        public Appointment(string title)
+            : this(title, DateTime.Now.AddDays(1))
+        {
+        }
+
+
+        // Display appointment details
+        public void PrintDetails(string type)
+        {
+            Console.WriteLine(
+                $"{type}: {Title} @ {Start:yyyy-MM-dd HH:mm}, " +
+                $"{Duration.TotalMinutes:0} min, {Location}"
+            );
         }
     }
 
-    // Regional calculator
-    public class RegionalTaxCalculator : TaxCalculator
-    {
-        // Sealed override prevents further overriding
-        public sealed override decimal CalculateTax(decimal amount)
-        {
-            return amount * 0.12m;
-        }
-    }
-
-
-
-    // Completely sealed class
-    public sealed class FixedDiscountCalculator
-    {
-        public decimal ApplyDiscount(decimal price)
-        {
-            return price * 0.9m;
-        }
-    }
-
-    
-   
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            // Sealed override can still be used normally
-            RegionalTaxCalculator regionalTax = new RegionalTaxCalculator();
-
-            decimal tax = regionalTax.CalculateTax(200);
-
-            Console.WriteLine(
-                $"RegionalTaxCalculator.CalculateTax(200) -> {tax:F2}"
+            // 1. Full constructor
+            Appointment fullAppointment = new Appointment(
+                "Standup",
+                new DateTime(2026, 8, 12, 9, 0, 0),
+                TimeSpan.FromMinutes(30),
+                "Room 4"
             );
 
-            // Sealed class can still be used normally
-            FixedDiscountCalculator discountCalculator =
-                new FixedDiscountCalculator();
+            fullAppointment.PrintDetails("Full");
 
-            decimal discountedPrice =
-                discountCalculator.ApplyDiscount(50);
 
+            // 2. Two-argument constructor
+            Appointment twoArgAppointment = new Appointment(
+                "Client Call",
+                new DateTime(2026, 8, 12, 14, 0, 0)
+            );
+
+            twoArgAppointment.PrintDetails("Two-arg");
+
+
+            // 3. One-argument constructor
+            Appointment oneArgAppointment = new Appointment(
+                "Follow Up"
+            );
+
+            oneArgAppointment.PrintDetails("One-arg");
+
+
+            // Static field
             Console.WriteLine(
-                $"FixedDiscountCalculator.ApplyDiscount(50) -> {discountedPrice:F2}"
+                $"DefaultDurationMinutes: {Appointment.DefaultDurationMinutes}"
             );
         }
     }

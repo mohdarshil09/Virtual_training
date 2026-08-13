@@ -1,105 +1,100 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Lab4
 {
-    // Base vehicle interface
-    public interface IVehicle
+    // Abstract base class
+    public abstract class Employee
     {
-        string Model { get; }
+        public string Name { get; }
+        public decimal BaseSalary { get; }
 
-        void Drive();
-    }
-
-    // Electric vehicle capabilities
-    public interface IElectric
-    {
-        int BatteryPercent { get; set; }
-
-        void Charge();
-    }
-
-    // Combines both interfaces
-    public interface IElectricVehicle : IVehicle, IElectric
-    {
-    }
-
-    // Implements the combined interface
-    public class ElectricCar : IElectricVehicle
-    {
-        // Model can only be assigned during object initialization
-        public string Model { get; init; }
-
-        private int _batteryPercent;
-
-        // Battery value is always kept between 0 and 100
-        public int BatteryPercent
+        // Constructor
+        protected Employee(string name, decimal baseSalary)
         {
-            get
-            {
-                return _batteryPercent;
-            }
-            set
-            {
-                if (value < 0)
-                    _batteryPercent = 0;
-                else if (value > 100)
-                    _batteryPercent = 100;
-                else
-                    _batteryPercent = value;
-            }
+            Name = name;
+            BaseSalary = baseSalary;
         }
 
-        // Reduce battery by 10%, minimum 0
-        public void Drive()
-        {
-            BatteryPercent -= 10;
-        }
+        // Abstract method
+        // Every derived class MUST implement this
+        public abstract decimal CalculatePay();
 
-        // Fully charge battery
-        public void Charge()
+        // Concrete method
+        // Works for every subclass
+        public void PrintPaySlip()
         {
-            BatteryPercent = 100;
+            Console.WriteLine($"{Name}: {CalculatePay():C}");
         }
     }
+
+
+    // Salaried employee
+    public class SalariedEmployee : Employee
+    {
+        public SalariedEmployee(string name, decimal baseSalary)
+            : base(name, baseSalary)
+        {
+        }
+
+        // Override abstract method
+        public override decimal CalculatePay()
+        {
+            return BaseSalary;
+        }
+    }
+
+
+    // Commission employee
+    public class CommissionEmployee : Employee
+    {
+        public decimal CommissionEarned;
+
+        public CommissionEmployee(
+            string name,
+            decimal baseSalary,
+            decimal commission)
+            : base(name, baseSalary)
+        {
+            CommissionEarned = commission;
+        }
+
+        // Override abstract method
+        public override decimal CalculatePay()
+        {
+            return BaseSalary + CommissionEarned;
+        }
+    }
+
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            // Create ElectricCar
-            ElectricCar car = new ElectricCar
+            // List of base-class references
+            List<Employee> employees = new List<Employee>();
+
+            // Salaried employee
+            employees.Add(
+                new SalariedEmployee("Alice", 4500m)
+            );
+
+            // Commission employee
+            employees.Add(
+                new CommissionEmployee("Bob", 3000m, 200m)
+            );
+
+            // Commission employee
+            employees.Add(
+                new CommissionEmployee("Carla", 3500m, 650m)
+            );
+
+
+            // Polymorphism
+            foreach (Employee employee in employees)
             {
-                Model = "Tesla Model 3",
-                BatteryPercent = 100
-            };
-
-            // Drive three times
-            car.Drive();
-            Console.WriteLine($"Battery after drive 1: {car.BatteryPercent}%");
-
-            car.Drive();
-            Console.WriteLine($"Battery after drive 2: {car.BatteryPercent}%");
-
-            car.Drive();
-            Console.WriteLine($"Battery after drive 3: {car.BatteryPercent}%");
-
-            // Charge
-            car.Charge();
-            Console.WriteLine($"Battery after charge: {car.BatteryPercent}%");
-
-            // Use object through IVehicle interface
-            IVehicle vehicle = car;
-
-            Console.WriteLine(
-                $"As IVehicle - Model: {vehicle.Model}"
-            );
-
-            // Use object through IElectric interface
-            IElectric electric = car;
-
-            Console.WriteLine(
-                $"As IElectric - BatteryPercent: {electric.BatteryPercent}"
-            );
+                employee.PrintPaySlip();
+            }
         }
     }
 }

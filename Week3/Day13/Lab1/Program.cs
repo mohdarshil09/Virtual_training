@@ -2,95 +2,107 @@
 
 namespace Lab1
 {
-    public class InventoryItem
+    // Struct
+    public struct RgbColor
     {
-        // Private backing field for Quantity
-        private int _quantity;
+        public byte R, G, B;
 
-        // Name can only be set during object construction
-        public string Name { get; init; }
-
-        // Quantity with validation
-        public int Quantity
+        public RgbColor(byte r, byte g, byte b)
         {
-            get { return _quantity; }
-            set
-            {
-                if (value < 0)
-                    throw new ArgumentException("Quantity cannot be negative");
-
-                _quantity = value;
-            }
+            R = r;
+            G = g;
+            B = b;
         }
 
-        // UnitPrice with validation
-        public decimal UnitPrice { get; set; }
-
-        // Computed property - no backing field
-        public decimal TotalValue
+        // Print color as #RRGGBB
+        public override string ToString()
         {
-            get { return Quantity * UnitPrice; }
+            return $"#{R:X2}{G:X2}{B:X2}";
         }
+    }
 
-        // Constructor
-        public InventoryItem(string name, int quantity, decimal unitPrice)
-        {
-            // Validate Name
-            if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Name cannot be null or whitespace");
+    // Enum
+    public enum NamedColor
+    {
+        Red,
+        Green,
+        Blue,
+        White,
+        Black
+    }
 
-            Name = name;
-
-            // Assign through properties so validation runs
-            Quantity = quantity;
-            UnitPrice = unitPrice;
-        }
-
-        // Optional Bonus: Restock method
-        public void Restock(int amount)
-        {
-            if (amount <= 0)
-                throw new ArgumentException("Restock amount must be greater than zero");
-
-            Quantity += amount;
-        }
+    // Class
+    public class Pixel
+    {
+        public RgbColor Color;
     }
 
     internal class Program
     {
+        // Convert NamedColor to RgbColor
+        static RgbColor FromNamed(NamedColor name)
+        {
+            switch (name)
+            {
+                case NamedColor.Red:
+                    return new RgbColor(255, 0, 0);
+
+                case NamedColor.Green:
+                    return new RgbColor(0, 255, 0);
+
+                case NamedColor.Blue:
+                    return new RgbColor(0, 0, 255);
+
+                case NamedColor.White:
+                    return new RgbColor(255, 255, 255);
+
+                case NamedColor.Black:
+                    return new RgbColor(0, 0, 0);
+
+                default:
+                    throw new ArgumentException("Invalid color");
+            }
+        }
+
         static void Main(string[] args)
         {
-            // Create a valid InventoryItem
-            InventoryItem item = new InventoryItem("Keyboard", 3, 45.00m);
+            
+            // STRUCT COPY
+           
 
-            Console.WriteLine(
-                $"Created: {item.Name}, Qty={item.Quantity}, " +
-                $"Price=${item.UnitPrice:F2}, Total=${item.TotalValue:F2}"
-            );
+            Console.WriteLine("-- struct copy --");
 
-            // Test Quantity validation
-            try
-            {
-                item.Quantity = -5;
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(
-                    $"Caught expected error setting Quantity=-5: {ex.Message}"
-                );
-            }
+            RgbColor a = FromNamed(NamedColor.Red);
 
-            // Test UnitPrice validation
-            try
-            {
-                item.UnitPrice = 0;
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(
-                    $"Caught expected error setting UnitPrice=0: {ex.Message}"
-                );
-            }
+            // Copy struct
+            RgbColor b = a;
+
+            // Modify b
+            b.R = 1;
+
+            Console.WriteLine($"a = {a}");
+            Console.WriteLine($"b = {b}");
+
+
+            
+            // CLASS / REFERENCE COPY
+            
+
+            Console.WriteLine();
+            Console.WriteLine("-- class/reference copy --");
+
+            Pixel p1 = new Pixel();
+
+            p1.Color = FromNamed(NamedColor.Green);
+
+            // Copy reference
+            Pixel p2 = p1;
+
+            // Modify p2
+            p2.Color = new RgbColor(0, 255, 0);
+
+            Console.WriteLine($"p1.Color = {p1.Color}");
+            Console.WriteLine($"p2.Color = {p2.Color}");
         }
     }
 }

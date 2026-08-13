@@ -1,100 +1,129 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lab2
 {
-    // Abstract base class
-    public abstract class NotificationChannel
+    // Base class
+    public class LibraryBook
     {
-        public bool TrySend(string message)
+        // Private: accessible only inside LibraryBook
+        private string _isbn;
+
+        // Public: accessible from anywhere
+        public string Title;
+
+        // Protected: accessible inside LibraryBook and derived classes
+        protected string ShelfLocation = "Unassigned";
+
+        // Internal: accessible anywhere within the same project/assembly
+        internal int CopiesAvailable;
+
+        // Static: one shared variable for all LibraryBook objects
+        public static int TotalBooksCreated;
+
+
+        // Constructor
+        public LibraryBook(string title, string isbn)
         {
-            try
-            {
-                return Send(message);
-            }
-            catch
-            {
-                return false;
-            }
+            Title = title;
+            _isbn = isbn;
+
+            // Every new book starts with 1 copy
+            CopiesAvailable = 1;
+
+            // Increase shared counter
+            TotalBooksCreated++;
         }
 
-        protected abstract bool Send(string message);
-    }
 
-    // Email implementation
-    public class EmailChannel : NotificationChannel
-    {
-        protected override bool Send(string message)
+        // Protected internal:
+        // Accessible inside this class, derived classes,
+        // and other code in the same assembly.
+        protected internal void Relocate(string newLocation)
         {
-            return true;
+            ShelfLocation = newLocation;
+        }
+
+
+        // Private protected:
+        // Accessible only inside LibraryBook and derived classes
+        // within the same assembly.
+        private protected void AdjustCopies(int delta)
+        {
+            CopiesAvailable += delta;
         }
     }
 
-    // SMS implementation
-    public class SmsChannel : NotificationChannel
-    {
-        protected override bool Send(string message)
-        {
-            if (message.Length > 160)
-                throw new Exception("SMS message is too long.");
 
-            return true;
+    // Derived class
+    public class ReferenceBook : LibraryBook
+    {
+        public ReferenceBook(string title, string isbn)
+            : base(title, isbn)
+        {
+        }
+
+
+        public void PrintLocation()
+        {
+            // Access protected field
+            Console.WriteLine(
+                $"ReferenceBook shelf location before Relocate: \"{ShelfLocation}\""
+            );
+
+            // Access protected internal method
+            Relocate("Reference Section");
+
+            Console.WriteLine(
+                $"ReferenceBook shelf location after Relocate: \"{ShelfLocation}\""
+            );
+
+            // Access private protected method
+            AdjustCopies(2);
+
+            Console.WriteLine(
+                $"Copies available after AdjustCopies(+2): {CopiesAvailable}"
+            );
         }
     }
+
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            // Create notification channels
-            List<NotificationChannel> channels = new List<NotificationChannel>
-            {
-                new EmailChannel(),
-                new SmsChannel(),
-                new EmailChannel(),
-                new SmsChannel()
-            };
+            // Create first book
+            LibraryBook book1 =
+                new LibraryBook("C# Basics", "ISBN001");
 
-            // Short message
-            string shortMessage = "Hello, this is a short message.";
+            Console.WriteLine(
+                $"Book 1 created. Total books so far: {LibraryBook.TotalBooksCreated}"
+            );
 
-            // Long message
-            string longMessage = new string('A', 161);
 
-            // Store results
-            List<bool> results = new List<bool>();
+            // Create second book
+            LibraryBook book2 =
+                new LibraryBook("OOP in C#", "ISBN002");
 
-            // First two channels use short message
-            results.Add(channels[0].TrySend(shortMessage));
-            results.Add(channels[1].TrySend(shortMessage));
+            Console.WriteLine(
+                $"Book 2 created. Total books so far: {LibraryBook.TotalBooksCreated}"
+            );
 
-            // Last two channels use long message
-            results.Add(channels[2].TrySend(longMessage));
-            results.Add(channels[3].TrySend(longMessage));
 
-            // Anonymous-type report using LINQ
-            var report = channels
-                .Select((channel, index) => new
-                {
-                    ChannelType = channel.GetType().Name,
-                    Success = results[index]
-                });
+            // Create third book
+            LibraryBook book3 =
+                new LibraryBook("Data Structures", "ISBN003");
 
-            // Print report
-            foreach (var entry in report)
-            {
-                Console.WriteLine(
-                    $"{entry.ChannelType}: {(entry.Success ? "Success" : "Failed")}"
-                );
-            }
+            Console.WriteLine(
+                $"Book 3 created. Total books so far: {LibraryBook.TotalBooksCreated}"
+            );
 
-            // Count successes and failures
-            int succeeded = report.Count(x => x.Success);
-            int failed = report.Count(x => !x.Success);
 
-            Console.WriteLine();
-            Console.WriteLine($"Succeeded: {succeeded}, Failed: {failed}");
+            // Create ReferenceBook
+            ReferenceBook referenceBook =
+                new ReferenceBook("C# Reference", "ISBN004");
+
+            // Demonstrate protected/protected internal/private protected
+            referenceBook.PrintLocation();
         }
     }
 }

@@ -1,110 +1,216 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
 
-namespace Lab3
+static class StringToolkit
 {
-    public class Appointment
+    // 1. Reverse a string
+    public static string Reverse(string input)
     {
-        // Properties
-        public string Title { get; }
-        public DateTime Start { get; }
-        public TimeSpan Duration { get; }
-        public string Location { get; }
+        StringBuilder result = new StringBuilder();
 
-        // Static field
-        public static int DefaultDurationMinutes;
-
-
-        // Static constructor
-        static Appointment()
+        for (int i = input.Length - 1; i >= 0; i--)
         {
-            Console.WriteLine(
-                "Appointment type initialized. Default duration set to 30 minutes."
-            );
-
-            DefaultDurationMinutes = 30;
+            result.Append(input[i]);
         }
 
-
-        // Full constructor
-        public Appointment(
-            string title,
-            DateTime start,
-            TimeSpan duration,
-            string location)
-        {
-            Title = title;
-            Start = start;
-            Duration = duration;
-            Location = location;
-        }
-
-
-        // Two-argument constructor
-        // Chains to the full constructor
-        public Appointment(string title, DateTime start)
-            : this(
-                title,
-                start,
-                TimeSpan.FromMinutes(DefaultDurationMinutes),
-                "TBD")
-        {
-        }
-
-
-        // One-argument constructor
-        // Chains to the two-argument constructor
-        public Appointment(string title)
-            : this(title, DateTime.Now.AddDays(1))
-        {
-        }
-
-
-        // Display appointment details
-        public void PrintDetails(string type)
-        {
-            Console.WriteLine(
-                $"{type}: {Title} @ {Start:yyyy-MM-dd HH:mm}, " +
-                $"{Duration.TotalMinutes:0} min, {Location}"
-            );
-        }
+        return result.ToString();
     }
 
 
-    internal class Program
+    // 2. Count occurrences of a character
+    public static int CountChar(string text, char searchChar)
     {
-        static void Main(string[] args)
+        int count = 0;
+
+        foreach (char c in text)
         {
-            // 1. Full constructor
-            Appointment fullAppointment = new Appointment(
-                "Standup",
-                new DateTime(2026, 8, 12, 9, 0, 0),
-                TimeSpan.FromMinutes(30),
-                "Room 4"
+            if (c == searchChar)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
+    // 3. Remove duplicate characters
+    public static string RemoveDuplicates(string input)
+    {
+        StringBuilder result = new StringBuilder();
+
+        foreach (char c in input)
+        {
+            if (!result.ToString().Contains(c.ToString()))
+            {
+                result.Append(c);
+            }
+        }
+
+        return result.ToString();
+    }
+
+
+    // 4. Check palindrome ignoring case and spaces
+    public static bool IsPalindrome(string input)
+    {
+        // Remove spaces and convert to lowercase
+        string cleaned = input
+            .Replace(" ", "")
+            .ToLower();
+
+        int left = 0;
+        int right = cleaned.Length - 1;
+
+        while (left < right)
+        {
+            if (cleaned[left] != cleaned[right])
+            {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+
+    // 5. Convert string to Title Case
+    public static string ToTitleCase(string input)
+    {
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+
+        return textInfo.ToTitleCase(input.ToLower());
+    }
+
+
+    // 6. Extract only digits
+    public static string ExtractNumbers(string input)
+    {
+        StringBuilder result = new StringBuilder();
+
+        foreach (char c in input)
+        {
+            if (char.IsDigit(c))
+            {
+                result.Append(c);
+            }
+        }
+
+        return result.ToString();
+    }
+
+
+    // Bonus: Word frequency
+    public static Dictionary<string, int> WordFrequency(string text)
+    {
+        Dictionary<string, int> frequency =
+            new Dictionary<string, int>(
+                StringComparer.OrdinalIgnoreCase
             );
 
-            fullAppointment.PrintDetails("Full");
+        StringBuilder cleaned = new StringBuilder();
 
+        // Replace punctuation with spaces
+        foreach (char c in text)
+        {
+            if (char.IsLetterOrDigit(c) || char.IsWhiteSpace(c))
+            {
+                cleaned.Append(c);
+            }
+            else
+            {
+                cleaned.Append(' ');
+            }
+        }
 
-            // 2. Two-argument constructor
-            Appointment twoArgAppointment = new Appointment(
-                "Client Call",
-                new DateTime(2026, 8, 12, 14, 0, 0)
+        string[] words = cleaned
+            .ToString()
+            .Split(
+                ' ',
+                StringSplitOptions.RemoveEmptyEntries
             );
 
-            twoArgAppointment.PrintDetails("Two-arg");
+        foreach (string word in words)
+        {
+            if (frequency.ContainsKey(word))
+            {
+                frequency[word]++;
+            }
+            else
+            {
+                frequency[word] = 1;
+            }
+        }
+
+        return frequency;
+    }
+}
 
 
-            // 3. One-argument constructor
-            Appointment oneArgAppointment = new Appointment(
-                "Follow Up"
+class Program
+{
+    static void Main()
+    {
+        // Reverse
+        Console.WriteLine(
+            "Reverse(\"Hello\") -> " +
+            StringToolkit.Reverse("Hello")
+        );
+
+
+        // CountChar
+        Console.WriteLine(
+            "CountChar(\"banana\", 'a') -> " +
+            StringToolkit.CountChar("banana", 'a')
+        );
+
+
+        // RemoveDuplicates
+        Console.WriteLine(
+            "RemoveDuplicates(\"mississippi\") -> " +
+            StringToolkit.RemoveDuplicates("mississippi")
+        );
+
+
+        // IsPalindrome
+        Console.WriteLine(
+            "IsPalindrome(\"race car\") -> " +
+            StringToolkit.IsPalindrome("race car")
+        );
+
+
+        // ToTitleCase
+        Console.WriteLine(
+            "ToTitleCase(\"hello training team\") -> " +
+            StringToolkit.ToTitleCase("hello training team")
+        );
+
+
+        // ExtractNumbers
+        Console.WriteLine(
+            "ExtractNumbers(\"Order #4521, qty 3\") -> " +
+            StringToolkit.ExtractNumbers("Order #4521, qty 3")
+        );
+
+
+        // Bonus
+        Console.WriteLine();
+        Console.WriteLine("Word Frequency:");
+
+        Dictionary<string, int> result =
+            StringToolkit.WordFrequency(
+                "Hello world! Hello C# world."
             );
 
-            oneArgAppointment.PrintDetails("One-arg");
-
-
-            // Static field
+        foreach (var item in result)
+        {
             Console.WriteLine(
-                $"DefaultDurationMinutes: {Appointment.DefaultDurationMinutes}"
+                item.Key + " -> " + item.Value
             );
         }
     }

@@ -1,100 +1,141 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
 
-namespace Lab4
+class Employee
 {
-    // Abstract base class
-    public abstract class Employee
+    public string Name { get; set; }
+    public string Department { get; set; }
+    public decimal Salary { get; set; }
+}
+
+// StringToolkit class
+static class StringToolkit
+{
+    public static string ToTitleCase(string input)
     {
-        public string Name { get; }
-        public decimal BaseSalary { get; }
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
 
-        // Constructor
-        protected Employee(string name, decimal baseSalary)
-        {
-            Name = name;
-            BaseSalary = baseSalary;
-        }
-
-        // Abstract method
-        // Every derived class MUST implement this
-        public abstract decimal CalculatePay();
-
-        // Concrete method
-        // Works for every subclass
-        public void PrintPaySlip()
-        {
-            Console.WriteLine($"{Name}: {CalculatePay():C}");
-        }
+        return textInfo.ToTitleCase(input.ToLower());
     }
+}
 
-
-    // Salaried employee
-    public class SalariedEmployee : Employee
+class Program
+{
+    static void Main()
     {
-        public SalariedEmployee(string name, decimal baseSalary)
-            : base(name, baseSalary)
+        const string rawData = @"
+john smith|engineering|72000
+MARY jones|sales|65000
+
+ravi KUMAR|engineering|81000
+";
+
+        // Store employees
+        List<Employee> employees = new List<Employee>();
+
+        // Split raw data into rows
+        string[] rows = rawData.Split(
+            '\n',
+            StringSplitOptions.None
+        );
+
+        // Parse each row
+        foreach (string row in rows)
         {
-        }
-
-        // Override abstract method
-        public override decimal CalculatePay()
-        {
-            return BaseSalary;
-        }
-    }
-
-
-    // Commission employee
-    public class CommissionEmployee : Employee
-    {
-        public decimal CommissionEarned;
-
-        public CommissionEmployee(
-            string name,
-            decimal baseSalary,
-            decimal commission)
-            : base(name, baseSalary)
-        {
-            CommissionEarned = commission;
-        }
-
-        // Override abstract method
-        public override decimal CalculatePay()
-        {
-            return BaseSalary + CommissionEarned;
-        }
-    }
-
-
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            // List of base-class references
-            List<Employee> employees = new List<Employee>();
-
-            // Salaried employee
-            employees.Add(
-                new SalariedEmployee("Alice", 4500m)
-            );
-
-            // Commission employee
-            employees.Add(
-                new CommissionEmployee("Bob", 3000m, 200m)
-            );
-
-            // Commission employee
-            employees.Add(
-                new CommissionEmployee("Carla", 3500m, 650m)
-            );
-
-
-            // Polymorphism
-            foreach (Employee employee in employees)
+            // Skip blank rows
+            if (string.IsNullOrWhiteSpace(row))
             {
-                employee.PrintPaySlip();
+                continue;
             }
+
+            // Split row into fields
+            string[] fields = row.Trim().Split('|');
+
+            if (fields.Length != 3)
+            {
+                continue;
+            }
+
+            string name = fields[0].Trim();
+            string department = fields[1].Trim();
+            decimal salary = decimal.Parse(fields[2].Trim());
+
+            employees.Add(new Employee
+            {
+                Name = StringToolkit.ToTitleCase(name),
+                Department = StringToolkit.ToTitleCase(department),
+                Salary = salary
+            });
         }
+
+        // Calculate total salary
+        decimal totalSalary = 0;
+
+        foreach (Employee employee in employees)
+        {
+            totalSalary += employee.Salary;
+        }
+
+        // Create StringBuilder
+        StringBuilder sb = new StringBuilder();
+
+        int appendCalls = 0;
+
+        // Title
+        sb.AppendLine("        EMPLOYEE COMPENSATION REPORT");
+        appendCalls++;
+
+        sb.AppendLine("==============================================");
+        appendCalls++;
+
+        // Header
+        sb.AppendLine(
+            "Name".PadRight(20) +
+            "Department".PadRight(18) +
+            "Salary".PadLeft(12)
+        );
+        appendCalls++;
+
+        sb.AppendLine("----------------------------------------------");
+        appendCalls++;
+
+        // Employee rows
+        foreach (Employee employee in employees)
+        {
+            string line =
+                employee.Name.PadRight(20) +
+                employee.Department.PadRight(18) +
+                employee.Salary.ToString("N0").PadLeft(12);
+
+            sb.AppendLine(line);
+            appendCalls++;
+        }
+
+        sb.AppendLine("----------------------------------------------");
+        appendCalls++;
+
+        // Footer
+        sb.AppendLine(
+            $"Employees: {employees.Count}    " +
+            $"Total Salary: {totalSalary:N0}"
+        );
+        appendCalls++;
+
+        // Print report
+        Console.WriteLine(sb.ToString());
+
+        // Statistics
+        Console.WriteLine();
+        Console.WriteLine("===== BUILD STATISTICS =====");
+
+        Console.WriteLine(
+            $"StringBuilder Append calls: {appendCalls}"
+        );
+
+        Console.WriteLine(
+            "String concatenations in loop: 0"
+        );
     }
 }

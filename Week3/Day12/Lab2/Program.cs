@@ -1,129 +1,134 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Text;
 
-namespace Lab2
+class Lab2
 {
-    // Base class
-    public class LibraryBook
+    // Build string using normal string concatenation
+    static string BuildWithString(int count)
     {
-        // Private: accessible only inside LibraryBook
-        private string _isbn;
+        string result = "";
 
-        // Public: accessible from anywhere
-        public string Title;
-
-        // Protected: accessible inside LibraryBook and derived classes
-        protected string ShelfLocation = "Unassigned";
-
-        // Internal: accessible anywhere within the same project/assembly
-        internal int CopiesAvailable;
-
-        // Static: one shared variable for all LibraryBook objects
-        public static int TotalBooksCreated;
-
-
-        // Constructor
-        public LibraryBook(string title, string isbn)
+        for (int i = 0; i < count; i++)
         {
-            Title = title;
-            _isbn = isbn;
-
-            // Every new book starts with 1 copy
-            CopiesAvailable = 1;
-
-            // Increase shared counter
-            TotalBooksCreated++;
+            result += i.ToString();
         }
 
-
-        // Protected internal:
-        // Accessible inside this class, derived classes,
-        // and other code in the same assembly.
-        protected internal void Relocate(string newLocation)
-        {
-            ShelfLocation = newLocation;
-        }
-
-
-        // Private protected:
-        // Accessible only inside LibraryBook and derived classes
-        // within the same assembly.
-        private protected void AdjustCopies(int delta)
-        {
-            CopiesAvailable += delta;
-        }
+        return result;
     }
 
-
-    // Derived class
-    public class ReferenceBook : LibraryBook
+    // Build string using StringBuilder
+    static string BuildWithStringBuilder(int count)
     {
-        public ReferenceBook(string title, string isbn)
-            : base(title, isbn)
+        // Give StringBuilder an initial capacity
+        StringBuilder sb = new StringBuilder(count * 2);
+
+        for (int i = 0; i < count; i++)
         {
+            sb.Append(i.ToString());
         }
 
-
-        public void PrintLocation()
-        {
-            // Access protected field
-            Console.WriteLine(
-                $"ReferenceBook shelf location before Relocate: \"{ShelfLocation}\""
-            );
-
-            // Access protected internal method
-            Relocate("Reference Section");
-
-            Console.WriteLine(
-                $"ReferenceBook shelf location after Relocate: \"{ShelfLocation}\""
-            );
-
-            // Access private protected method
-            AdjustCopies(2);
-
-            Console.WriteLine(
-                $"Copies available after AdjustCopies(+2): {CopiesAvailable}"
-            );
-        }
+        return sb.ToString();
     }
 
-
-    internal class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        int count = 50000;
+
+        // -------------------------------
+        // Test String concatenation
+        // -------------------------------
+
+        Stopwatch stopwatch = Stopwatch.StartNew();
+
+        BuildWithString(count);
+
+        stopwatch.Stop();
+
+        long stringTime = stopwatch.ElapsedMilliseconds;
+
+
+        // -------------------------------
+        // Test StringBuilder
+        // -------------------------------
+
+        stopwatch.Restart();
+
+        BuildWithStringBuilder(count);
+
+        stopwatch.Stop();
+
+        long stringBuilderTime = stopwatch.ElapsedMilliseconds;
+
+
+        // -------------------------------
+        // Print results
+        // -------------------------------
+
+        Console.WriteLine(
+            $"String concatenation ({count:N0} items): {stringTime} ms"
+        );
+
+        Console.WriteLine(
+            $"StringBuilder ({count:N0} items): {stringBuilderTime} ms"
+        );
+
+
+        // Calculate ratio
+        if (stringBuilderTime > 0)
         {
-            // Create first book
-            LibraryBook book1 =
-                new LibraryBook("C# Basics", "ISBN001");
+            double ratio =
+                (double)stringTime / stringBuilderTime;
 
             Console.WriteLine(
-                $"Book 1 created. Total books so far: {LibraryBook.TotalBooksCreated}"
+                $"StringBuilder is roughly {ratio:F1}x faster"
             );
+        }
 
 
-            // Create second book
-            LibraryBook book2 =
-                new LibraryBook("OOP in C#", "ISBN002");
+        // -------------------------------
+        // Test with 200,000
+        // -------------------------------
+
+        count = 200000;
+
+        stopwatch.Restart();
+
+        BuildWithString(count);
+
+        stopwatch.Stop();
+
+        stringTime = stopwatch.ElapsedMilliseconds;
+
+
+        stopwatch.Restart();
+
+        BuildWithStringBuilder(count);
+
+        stopwatch.Stop();
+
+        stringBuilderTime = stopwatch.ElapsedMilliseconds;
+
+
+        Console.WriteLine();
+        Console.WriteLine("----- 200,000 Items -----");
+
+        Console.WriteLine(
+            $"String concatenation ({count:N0} items): {stringTime} ms"
+        );
+
+        Console.WriteLine(
+            $"StringBuilder ({count:N0} items): {stringBuilderTime} ms"
+        );
+
+        if (stringBuilderTime > 0)
+        {
+            double ratio =
+                (double)stringTime / stringBuilderTime;
 
             Console.WriteLine(
-                $"Book 2 created. Total books so far: {LibraryBook.TotalBooksCreated}"
+                $"StringBuilder is roughly {ratio:F1}x faster"
             );
-
-
-            // Create third book
-            LibraryBook book3 =
-                new LibraryBook("Data Structures", "ISBN003");
-
-            Console.WriteLine(
-                $"Book 3 created. Total books so far: {LibraryBook.TotalBooksCreated}"
-            );
-
-
-            // Create ReferenceBook
-            ReferenceBook referenceBook =
-                new ReferenceBook("C# Reference", "ISBN004");
-
-            // Demonstrate protected/protected internal/private protected
-            referenceBook.PrintLocation();
         }
     }
 }

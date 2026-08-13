@@ -1,108 +1,103 @@
 ﻿using System;
 
-namespace Lab1
+class Lab1
 {
-    // Struct
-    public struct RgbColor
+    static void Main()
     {
-        public byte R, G, B;
+        // Original string
+        string original = "  Hello, Training Team!  ";
 
-        public RgbColor(byte r, byte g, byte b)
+        // TODO 1: Trim the string into a new variable
+        string trimmed = original.Trim();
+
+        // TODO 2: Compare original and trimmed
+        Console.WriteLine(
+            "ReferenceEquals(original, trimmed): " +
+            object.ReferenceEquals(original, trimmed)
+        );
+
+        // TODO 3: Contains / StartsWith / IndexOf / Replace
+
+        // Check whether string contains "Training"
+        Console.WriteLine(
+            "Contains \"Training\": " +
+            trimmed.Contains("Training")
+        );
+
+        // Check whether string starts with "Hello"
+        Console.WriteLine(
+            "StartsWith trimmed \"Hello\": " +
+            trimmed.StartsWith("Hello")
+        );
+
+        // Find index of first comma
+        Console.WriteLine(
+            "Index of first comma: " +
+            trimmed.IndexOf(',')
+        );
+
+        // Replace "Training Team" with "Engineering Team"
+        string replaced = trimmed.Replace(
+            "Training Team",
+            "Engineering Team"
+        );
+
+        Console.WriteLine(
+            "\"Training Team\" replaced -> " + replaced
+        );
+
+        // TODO 4: Split into words
+        string[] words = trimmed.Split(
+            new char[] { ' ', ',' },
+            StringSplitOptions.RemoveEmptyEntries
+        );
+
+        foreach (string word in words)
         {
-            R = r;
-            G = g;
-            B = b;
+            Console.WriteLine(word);
         }
 
-        // Print color as #RRGGBB
-        public override string ToString()
-        {
-            return $"#{R:X2}{G:X2}{B:X2}";
-        }
-    }
+        // TODO 5: IsNullOrWhiteSpace checks
 
-    // Enum
-    public enum NamedColor
-    {
-        Red,
-        Green,
-        Blue,
-        White,
-        Black
-    }
+        string nullString = null;
+        string emptyString = "";
+        string spaces = "   ";
+        string okString = "ok";
 
-    // Class
-    public class Pixel
-    {
-        public RgbColor Color;
-    }
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(null): " +
+            string.IsNullOrWhiteSpace(nullString)
+        );
 
-    internal class Program
-    {
-        // Convert NamedColor to RgbColor
-        static RgbColor FromNamed(NamedColor name)
-        {
-            switch (name)
-            {
-                case NamedColor.Red:
-                    return new RgbColor(255, 0, 0);
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(\"\"): " +
+            string.IsNullOrWhiteSpace(emptyString)
+        );
 
-                case NamedColor.Green:
-                    return new RgbColor(0, 255, 0);
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(\"   \"): " +
+            string.IsNullOrWhiteSpace(spaces)
+        );
 
-                case NamedColor.Blue:
-                    return new RgbColor(0, 0, 255);
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(\"ok\"): " +
+            string.IsNullOrWhiteSpace(okString)
+        );
 
-                case NamedColor.White:
-                    return new RgbColor(255, 255, 255);
+        // Bonus Challenge
+        string str1 = "HELLO";
+        string str2 = "hello";
 
-                case NamedColor.Black:
-                    return new RgbColor(0, 0, 0);
+        int result = string.Compare(
+            str1,
+            str2,
+            StringComparison.OrdinalIgnoreCase
+        );
 
-                default:
-                    throw new ArgumentException("Invalid color");
-            }
-        }
+        Console.WriteLine(
+            "Compare HELLO and hello: " + result
+        );
 
-        static void Main(string[] args)
-        {
-            
-            // STRUCT COPY
-           
-
-            Console.WriteLine("-- struct copy --");
-
-            RgbColor a = FromNamed(NamedColor.Red);
-
-            // Copy struct
-            RgbColor b = a;
-
-            // Modify b
-            b.R = 1;
-
-            Console.WriteLine($"a = {a}");
-            Console.WriteLine($"b = {b}");
-
-
-            
-            // CLASS / REFERENCE COPY
-            
-
-            Console.WriteLine();
-            Console.WriteLine("-- class/reference copy --");
-
-            Pixel p1 = new Pixel();
-
-            p1.Color = FromNamed(NamedColor.Green);
-
-            // Copy reference
-            Pixel p2 = p1;
-
-            // Modify p2
-            p2.Color = new RgbColor(0, 255, 0);
-
-            Console.WriteLine($"p1.Color = {p1.Color}");
-            Console.WriteLine($"p2.Color = {p2.Color}");
-        }
+        // Result is 0 because comparison ignores uppercase/lowercase.
     }
 }
