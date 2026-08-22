@@ -1,0 +1,15 @@
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\bin\Debug\net10.0\QuickBiteEngine.exe
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\bin\Debug\net10.0\QuickBiteEngine.deps.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\bin\Debug\net10.0\QuickBiteEngine.runtimeconfig.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\bin\Debug\net10.0\QuickBiteEngine.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\bin\Debug\net10.0\QuickBiteEngine.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.AssemblyInfoInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.AssemblyInfo.cs
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.csproj.CoreCompileInputs.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.sourcelink.json
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\refint\QuickBiteEngine.dll
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.pdb
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\QuickBiteEngine.genruntimeconfig.cache
+C:\Users\MOHD ARSHIL AZIM\Desktop\Virtual_training\Week4\Day18\Lab\QuickBiteEngine\obj\Debug\net10.0\ref\QuickBiteEngine.dll
